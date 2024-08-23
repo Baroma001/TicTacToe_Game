@@ -24,7 +24,7 @@ void playGame(std::vector<std::vector<int>> &field) {
     int counter = 0;
     while(!winning(field)) {
         if(counter >= 9) {
-            std::cout<<"Its a draw!"<<std::endl;
+            std::cout<<"Its a draw, well played!"<<std::endl;
         }
         setMove(field, playerOneTurn);
         printField(field, false);
