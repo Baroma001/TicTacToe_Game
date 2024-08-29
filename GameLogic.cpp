@@ -2,6 +2,7 @@
 // Created by Yannick Hettinga on 27.08.24.
 //
 #include "GameLogic.h"
+#include "SinglePlayerBot.h"
 
 void playGame(std::vector<std::vector<int>> &field) {
     bool playerOneTurn = true;
@@ -9,6 +10,7 @@ void playGame(std::vector<std::vector<int>> &field) {
     while(!winning(field)) {
         if(counter >= 9) {
             std::cout<<"Its a draw, well played!"<<std::endl;
+            break;
         }
         setMove(field, playerOneTurn);
         printField(field, false);
